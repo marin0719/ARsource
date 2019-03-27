@@ -10,9 +10,12 @@
  </head>
  <body>
   <a-scene embedded arjs>
-   <a-entity scale=".2 .2 .2">
-     <a-entity gltf-model="armodel.gltf" scale="-1 1 1">
-   </a-entity>
+  <a-assets>
+    <a-asset-item id="tree-obj" src="armodel.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="armodel.mtl"></a-asset-item>
+  </a-assets>
+
+  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
    <a-marker-camera type='pattern' url='pattern-marker.patt'></a-marker-camera>
   </a-scene>
 </body>
